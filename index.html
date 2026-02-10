@@ -3,166 +3,174 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Histología: la ventana microscópica al cuerpo humano- Histología</title>
+<title>Histología: la ventana microscópica al cuerpo humano</title>
 
 <style>
-
-body{
-font-family: Arial, sans-serif;
-margin:0;
-background:#f4f6f8;
-line-height:1.6;
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f6f8;
+    line-height:1.6;
 }
 
-header{
-background:#3b6ea5;
-color:white;
-padding:20px;
-text-align:center;
+header {
+    background:#a53b3b;
+    color:white;
+    padding:20px;
+    text-align:center;
 }
 
-nav{
-background:#2c5282;
-padding:12px;
-text-align:center;
+h1 {
+    margin:0;
 }
 
-nav a{
-color:white;
-margin:0 15px;
-text-decoration:none;
-font-weight:bold;
+.container {
+    max-width:900px;
+    margin:auto;
+    background:white;
+    padding:25px;
+    margin-top:20px;
+    border-radius:10px;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-nav a:hover{
-text-decoration:underline;
+/* Botones de secciones */
+.button-section {
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:center;
+    margin-bottom:20px;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-background:white;
-padding:25px;
-margin-top:20px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+.button-section button {
+    background:#822c2c;
+    color:white;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition: 0.3s;
 }
 
-h2{
-color:#2c5282;
+.button-section button:hover {
+    background:#a53b3b;
 }
 
-footer{
-text-align:center;
-padding:20px;
-font-size:14px;
-color:#666;
+/* Secciones ocultas inicialmente */
+.content-section {
+    display:none;
+    margin-top:20px;
 }
 
+h2 {
+    color:#2c5282;
+}
+
+footer {
+    text-align:center;
+    padding:20px;
+    font-size:14px;
+    color:#666;
+}
 </style>
 </head>
-
 <body>
 
 <header>
-<h1>Más allá de lo visible: Una mirada a la Histología</h1>
-<p>Apuntes teóricos</p>
+    <h1>Más allá de lo visible: Una mirada a la Histología</h1>
+    <p>Apuntes teóricos</p>
 </header>
-
-<nav>
-<a href="#inicio">Inicio</a>
-<a href="#piel">Piel</a>
-<a href="#salivales">Glándulas salivales</a>
-<a href="#pancreas">Páncreas</a>
-<a href="#digestivo">Tubo digestivo</a>
-</nav>
 
 <div class="container">
 
-<section id="inicio">
-<h2>Inicio</h2>
-<p>
-Página web dedicada al estudio de la histología con fines educativos dentro del FP Superior de Anatomía Patológica y Diagnóstico.
-</p>
-</section>
+    <div class="button-section">
+        <button onclick="showSection('inicio')">Inicio</button>
+        <button onclick="showSection('piel')">Piel</button>
+        <button onclick="showSection('salivales')">Glándulas Salivales</button>
+        <button onclick="showSection('pancreas')">Páncreas</button>
+        <button onclick="showSection('digestivo')">Tubo Digestivo</button>
+    </div>
 
-<section id="piel">
-<h2>Histología de la piel</h2>
+    <section id="inicio" class="content-section">
+        <h2>Inicio</h2>
+        <p>Página web dedicada al estudio de la histología con fines educativos dentro del FP Superior de Anatomía Patológica y Diagnóstico.</p>
+    </section>
 
-<p>La piel es el órgano más extenso del cuerpo humano y actúa como primera línea de defensa.</p>
+    <section id="piel" class="content-section">
+        <h2>Histología de la piel</h2>
+        <h3>Epidermis</h3>
+        <ul>
+            <li>Estrato basal: contiene melanocitos y células de Merkel.</li>
+            <li>Estrato espinoso: contiene células de Langerhans.</li>
+            <li>Estrato lúcido: presente solo en piel gruesa.</li>
+            <li>Estrato córneo: formado por corneocitos.</li>
+        </ul>
+        <h3>Dermis</h3>
+        <p>Compuesta por tejido conjuntivo con vasos sanguíneos, nervios y anexos cutáneos.</p>
+        <h3>Hipodermis</h3>
+        <p>Formada por tejido adiposo que protege y almacena energía.</p>
+    </section>
 
-<h3>Epidermis</h3>
-<ul>
-<li>Estrato basal: contiene melanocitos y células de Merkel.</li>
-<li>Estrato espinoso: contiene células de Langerhans.</li>
-<li>Estrato lúcido: presente solo en piel gruesa.</li>
-<li>Estrato córneo: formado por corneocitos.</li>
-</ul>
+    <section id="salivales" class="content-section">
+        <h2>Glándulas salivales</h2>
+        <h3>Adenómeros</h3>
+        <ul>
+            <li>Acinos serosos</li>
+            <li>Acinos mucosos</li>
+            <li>Acinos mixtos</li>
+        </ul>
+        <h3>Sistema de conductos</h3>
+        <ul>
+            <li>Conducto intercalar</li>
+            <li>Conducto estriado</li>
+            <li>Conducto excretor</li>
+        </ul>
+    </section>
 
-<h3>Dermis</h3>
-<p>Compuesta por tejido conjuntivo con vasos sanguíneos, nervios y anexos cutáneos.</p>
+    <section id="pancreas" class="content-section">
+        <h2>Histología del páncreas</h2>
+        <h3>Componente exocrino</h3>
+        <ul>
+            <li>Acinos pancreáticos</li>
+            <li>Células acinares</li>
+            <li>Células centroacinares</li>
+        </ul>
+        <h3>Componente endocrino</h3>
+        <ul>
+            <li>Células alfa (glucagón)</li>
+            <li>Células beta (insulina)</li>
+            <li>Células delta (somatostatina)</li>
+        </ul>
+    </section>
 
-<h3>Hipodermis</h3>
-<p>Formada por tejido adiposo que protege y almacena energía.</p>
-
-</section>
-
-<section id="salivales">
-<h2>Glándulas salivales</h2>
-
-<p>Órganos exocrinos encargados de producir saliva.</p>
-
-<h3>Adenómeros</h3>
-<ul>
-<li>Acinos serosos</li>
-<li>Acinos mucosos</li>
-<li>Acinos mixtos</li>
-</ul>
-
-<h3>Sistema de conductos</h3>
-<ul>
-<li>Conducto intercalar</li>
-<li>Conducto estriado</li>
-<li>Conducto excretor</li>
-</ul>
-
-</section>
-
-<section id="pancreas">
-<h2>Histología del páncreas</h2>
-
-<h3>Componente exocrino</h3>
-<ul>
-<li>Acinos pancreáticos</li>
-<li>Células acinares</li>
-<li>Células centroacinares</li>
-</ul>
-
-<h3>Componente endocrino</h3>
-<ul>
-<li>Células alfa (glucagón)</li>
-<li>Células beta (insulina)</li>
-<li>Células delta (somatostatina)</li>
-</ul>
-
-</section>
-
-<section id="digestivo">
-<h2>Tubo digestivo</h2>
-
-<h3>Esófago</h3>
-<p>Transporta el bolo alimenticio desde la faringe al estómago.</p>
-
-<h3>Estómago</h3>
-<p>Segmento encargado de la digestión química y mecánica del alimento.</p>
-
-</section>
+    <section id="digestivo" class="content-section">
+        <h2>Tubo digestivo</h2>
+        <h3>Esófago</h3>
+        <p>Transporta el bolo alimenticio desde la faringe al estómago.</p>
+        <h3>Estómago</h3>
+        <p>Segmento encargado de la digestión química y mecánica del alimento.</p>
+    </section>
 
 </div>
 
 <footer>
-<p>FP Superior Anatomía Patológica y Diagnóstico</p>
+    <p>FP Superior Anatomía Patológica y Diagnóstico</p>
 </footer>
+
+<script>
+function showSection(id) {
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => {
+        if(section.id === id) {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
+        }
+    });
+}
+</script>
 
 </body>
 </html>
